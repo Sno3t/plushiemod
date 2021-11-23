@@ -30,13 +30,11 @@ public class Plushiemod {
     public static final CreativeTabs PLUSHIETAB = new PlushieTab("PlushieTab");
 
 
-
-
     @Mod.Instance(MOD_ID)
     public static Plushiemod INSTANCE;
 
-    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
-    public static CommonProxy proxy;
+//    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
+//    public static CommonProxy proxy;
 
 //    @Mod.EventHandler
 //    public void preInit(FMLPreInitializationEvent event) {
@@ -91,7 +89,7 @@ public class Plushiemod {
 //            public static final Item BOW = new Bow("bow");
 //            public static final Item STUFFING = new Stuffing("stuffing");
 
-            event.getRegistry().register(new Stuffing().setRegistryName(MOD_ID, "stuffing"));
+//            event.getRegistry().register(new Stuffing().setRegistryName(MOD_ID, "stuffing"));
            /*
              event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
              event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
