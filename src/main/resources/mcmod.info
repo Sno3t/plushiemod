@@ -3,7 +3,7 @@
     "modid": "plushiemod",
     "name": "Plushy mod",
     "description": "A Touhou plushy mod",
-    "version": "0.0.1",
+    "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "updateUrl": "",

@@ -7,6 +7,6 @@ import java.util.List;
 
 public class BlockInit
 {
-    public static final List<Block> BLOCKS = new ArrayList<Block>();
+//    public static final List<Block> BLOCKS = new ArrayList<Block>();
 
 }

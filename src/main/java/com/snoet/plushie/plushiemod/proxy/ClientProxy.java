@@ -1,22 +1,8 @@
 package com.snoet.plushie.plushiemod.proxy;
 
-import com.google.common.util.concurrent.ListenableFuture;
-//import com.tutorialmod.turtywurty.entity.magiball.EntityMagiball;
-import com.snoet.plushie.plushiemod.init.ItemInit;
-
-import com.snoet.plushie.plushiemod.objects.items.Bow;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.entity.RenderSnowball;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
 
 public class ClientProxy extends CommonProxy
 {

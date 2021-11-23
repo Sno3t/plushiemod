@@ -6,15 +6,14 @@ import net.minecraft.item.Item;
 
 public class Stuffing extends Item {
 
-    public Stuffing(String name)//,  int amount)
+    public Stuffing()
     {
-        this.setRegistryName(name);
+//        this.setRegistryName();
         this.setCreativeTab(Plushiemod.PLUSHIETAB);
         this.setMaxStackSize(64);
-        this.setTranslationKey(name);
+//        this.setTranslationKey();
 
         ItemInit.ITEMS.add(this);
-
     }
 
 }

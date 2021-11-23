@@ -4,9 +4,9 @@ import com.snoet.plushie.plushiemod.Plushiemod;
 import com.snoet.plushie.plushiemod.init.ItemInit;
 import net.minecraft.item.Item;
 
-public class Bow extends Item {
+public class Sword extends Item {
 
-    public Bow(String name)
+    public Sword(String name)
     {
         this.setRegistryName(name);
         this.setCreativeTab(Plushiemod.PLUSHIETAB);
