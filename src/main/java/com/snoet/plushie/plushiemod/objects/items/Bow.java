@@ -4,9 +4,9 @@ import com.snoet.plushie.plushiemod.Plushiemod;
 import com.snoet.plushie.plushiemod.init.ItemInit;
 import net.minecraft.item.Item;
 
-public class Stuffing extends Item {
+public class Bow extends Item {
 
-    public Stuffing(String name)//,  int amount)
+    public Bow(String name)//,  int amount)
     {
         this.setRegistryName(name);
         this.setCreativeTab(Plushiemod.PLUSHIETAB);
@@ -14,7 +14,6 @@ public class Stuffing extends Item {
         this.setTranslationKey(name);
 
         ItemInit.ITEMS.add(this);
-
     }
 
 }

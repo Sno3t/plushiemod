@@ -1,7 +1,8 @@
 package com.snoet.plushie.plushiemod.util.handlers;
 
+import com.snoet.plushie.plushiemod.Plushiemod;
 import com.snoet.plushie.plushiemod.init.ItemInit;
-import com.snoet.plushie.plushiemod.util.IHasModel;
+import com.snoet.plushie.plushiemod.objects.items.Stuffing;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -43,12 +44,19 @@ public class RegistryHandler {
         event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
     }
 
+//    @SubscribeEvent
+//    public void registerBlocks(RegistryEvent.Register<Item> event)
+//    {
+//        event.getRegistry().registerAll(Stuffing);
+//    }
+
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event){
         for(Item item : ItemInit.ITEMS){
-            if (item instanceof IHasModel){
-                ((IHasModel)item).registerModels();
-            }
+            Plushiemod.proxy.registerItemRenderer(item, 0 ,"inventory");
+//            if (item instanceof IHasModel){
+//                ((IHasModel)item).registerModels();
+//            }
         }
     }
 

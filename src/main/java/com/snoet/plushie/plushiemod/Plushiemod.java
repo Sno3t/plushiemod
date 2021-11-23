@@ -1,14 +1,19 @@
 package com.snoet.plushie.plushiemod;
 
+import com.snoet.plushie.plushiemod.objects.items.Stuffing;
 import com.snoet.plushie.plushiemod.proxy.CommonProxy;
 import com.snoet.plushie.plushiemod.tabs.PlushieTab;
 import com.snoet.plushie.plushiemod.util.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(
         modid = Plushiemod.MOD_ID,
@@ -33,13 +38,24 @@ public class Plushiemod {
     public static CommonProxy proxy;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) {}
+    public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit();
+    }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {}
+    public void init(FMLInitializationEvent event) {
+        proxy.init();
+    }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event) {}
+    public void postInit(FMLPostInitializationEvent event) {
+        proxy.postInit();
+    }
+
+    @SubscribeEvent
+    public void registerBlocks(RegistryEvent.Register<Item> event) {
+        event.getRegistry().registerAll();
+    }
 
 //    @Mod.EventHandler
 //    public void init(FMLInitializationEvent event) {
@@ -68,35 +84,27 @@ public class Plushiemod {
 
 //    @Mod.EventBusSubscriber
 //    public static class ObjectRegistryHandler {
-//        /**
-//         * Listen for the register event for creating custom items
-//         */
 //        @SubscribeEvent
 //        public static void addItems(RegistryEvent.Register<Item> event) {
 //           /*
 //             event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
 //             event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
 //            */
-////            event.getRegistry().register(new ItemInit().setRegistryName(MOD_ID, "Stuffing"));
-//        }
+////            event.getRegistry().register(new Stuffing("stuffing").setRegistryName(MOD_ID, "stuffing"));
 //
-//        /**
-//         * Listen for the register event for creating custom blocks
-//         */
+//        }
 //        @SubscribeEvent
 //        public static void addBlocks(RegistryEvent.Register<Block> event) {
-//           /*
-//             event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
-//            */
+////            event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
 //        }
 //    }
-//    /* EXAMPLE ITEM AND BLOCK - you probably want these in separate files
-//    public static class MySpecialItem extends Item {
-//
-//    }
-//
-//    public static class MySpecialBlock extends Block {
-//
-//    }
-//    */
+    /* EXAMPLE ITEM AND BLOCK - you probably want these in separate files
+    public static class MySpecialItem extends Item {
+
+    }
+
+    public static class MySpecialBlock extends Block {
+
+    }
+    */
 }

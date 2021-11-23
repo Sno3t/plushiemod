@@ -15,7 +15,7 @@ public class PlushieTab extends CreativeTabs {
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(ItemInit.STUFFING);
+        return new ItemStack(ItemInit.BOW);
     }
 
 
